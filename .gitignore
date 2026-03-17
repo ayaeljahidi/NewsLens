@@ -1,0 +1,56 @@
+# ── Python ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Environment variables ─────────────────────────────
+.env
+.env.local
+.env.production
+*.env
+
+# ── Node / Frontend ───────────────────────────────────
+node_modules/
+dist/
+.cache/
+*.local
+
+# ── Vite ──────────────────────────────────────────────
+frontend/dist/
+frontend/.vite/
+
+# ── Elasticsearch / Data ──────────────────────────────
+data/
+*.json.bak
+dumps/
+
+# ── OS ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ── Logs ──────────────────────────────────────────────
+*.log
+logs/
+uvicorn.log
+
+# ── API Keys (IMPORTANT) ──────────────────────────────
+secrets.py
+config.local.py
