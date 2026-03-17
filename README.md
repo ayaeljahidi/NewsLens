@@ -1,6 +1,6 @@
 # NewsLens 📰
 Moteur de recherche d'articles avec synthèse IA instantanée
-Elasticsearch BM25 · Ollama Qwen3 · CC-News · React
+Elasticsearch BM25 · Ollama tinyllama · CC-News/NewsAPI · React 
 
 ## Structure
 ```
@@ -27,10 +27,6 @@ newslens/
 ## Lancement
 
 ### 1. Elasticsearch (WSL)
-```bash
-cd ~/elastic-tp && docker compose up -d
-```
-
 ### 2. Backend
 ```powershell
 cd newslens\backend
@@ -39,9 +35,14 @@ uvicorn main:app --reload
 ```
 
 ### 3. Indexer les articles (une fois, ~2 min)
+Option 1 — NewsAPI
+# 1. Crée une clé gratuite sur newsapi.org (30 secondes)
+# 2. Lance l'indexer
 ```powershell
 python indexer.py --n 1000 --news TA_CLE_ICI
 ```
+Option 2 — CC News
+python indexer.py --n 2000  # ← utilise datasets
 
 ### 4. Frontend
 ```powershell
@@ -52,7 +53,7 @@ npm install && npm run dev
 
 ## Fonctionnalités
 - Recherche instantanée avec highlights
-- Synthèse IA (Ollama TinyOllama) des top résultats
+- Synthèse IA (Ollama tinyllama) des top résultats
 - Autocomplete
 - Filtres par source
 - Pagination "Load more"
