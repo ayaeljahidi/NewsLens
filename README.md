@@ -36,8 +36,8 @@ uvicorn main:app --reload
 
 ### 3. Indexer les articles (une fois, ~2 min)
 Option 1 — NewsAPI
-# 1. Crée une clé gratuite sur newsapi.org (30 secondes)
-# 2. Lance l'indexer
+1. Crée une clé gratuite sur newsapi.org (30 secondes)
+2. Lance l'indexer
 ```powershell
 python indexer.py --n 1000 --news TA_CLE_ICI
 ```
